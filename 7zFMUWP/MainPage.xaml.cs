@@ -26,5 +26,16 @@ namespace _7zFMUWP
         {
             this.InitializeComponent();
         }
+
+        private void StackPanel_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            mysplitview1.IsPaneOpen = !mysplitview1.IsPaneOpen;
+
+        }
+
+        private void hamburgerbtn_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            mysplitview1.IsPaneOpen = !mysplitview1.IsPaneOpen;
+        }
     }
 }

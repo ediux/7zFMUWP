@@ -8,6 +8,48 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <RelativePanel Margin="60,0,0,0" Grid.Column="0" Grid.Row="1" Background="BlanchedAlmond">
+            <ListView >
+                <ListViewItem>
+                    <TextBlock Text="12344"/>
+                </ListViewItem>
+            </ListView>
+        </RelativePanel>
+        <SplitView Grid.Row="1" Grid.Column="0" Name="mysplitview1" DisplayMode="CompactOverlay" OpenPaneLength="300" CompactPaneLength="60" Opacity="0.8" PaneBackground="#C91B6EAE">
+            <SplitView.Pane>
+                <ListBox>
+                    <ListBoxItem x:Name="MenuBar">
+                        <StackPanel Orientation="Horizontal" Tapped="hamburgerbtn_Tapped" Name="hamburgerbtn" >
+                            <TextBlock  FontSize="36" FontFamily="Segoe MDL2 Assets" Text="&#xE700;"></TextBlock>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem x:Name="MenuItem_File">
+                        <StackPanel Orientation="Horizontal" Tapped="StackPanel_Tapped">
+                            <TextBlock x:Name="FileIcon" FontSize="36" FontFamily="Segoe MDL2 Assets" Text="&#xE105;"></TextBlock>
+                            <TextBlock Margin="30,0,0,0" FontSize="25" Text="File"></TextBlock>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <StackPanel Orientation="Horizontal" >
+                            <ListBox Margin="54,0,0,0">
+                                <ListBoxItem>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Margin="30,0,0,0" Text="Open..."></TextBlock>
+                                    </StackPanel>
+                                </ListBoxItem>
+                            </ListBox>
+                        </StackPanel>
+                    </ListBoxItem>
+                </ListBox>
+            </SplitView.Pane>
+        </SplitView>
     </Grid>
 </Page>
